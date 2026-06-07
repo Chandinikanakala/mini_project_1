@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1.0">
+
+    <title>Welcome</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background:
+                linear-gradient(
+                    135deg,
+                    #d4fc79,
+                    #96e6a1
+                );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow:
+                0 8px 20px rgba(0,0,0,0.2);
+            width: 400px;
+        }
+
+        h1 {
+            color: #2e7d32;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #388e3c;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 id="welcomeMessage">
+            Welcome!
+        </h1>
+
+        <p>
+            Thank you for using
+            Smart Meal Planner and
+            Shopping List Manager.
+        </p>
+
+        <button onclick="goToDashboard()">
+            Go to Dashboard
+        </button>
+
+    </div>
+
+    <script>
+
+        const username =
+            localStorage.getItem(
+                "username"
+            );
+
+        document.getElementById(
+            "welcomeMessage"
+        ).textContent =
+            `Welcome, ${username}!`;
+
+        function goToDashboard() {
+
+            window.location.href =
+                "index.html";
+
+        }
+
+    </script>
+
+</body>
+</html>

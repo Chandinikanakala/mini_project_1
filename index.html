@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Meal Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🍽 Smart Meal Planner and Shopping List Manager</h1>
+
+<button onclick="logout()">
+    Logout
+</button>
+
+<p>Plan your meals and organize your grocery shopping with ease!</p>
+
+<h2>Add New Recipe</h2>
+
+<input type="text"
+id="recipeName"
+placeholder="Recipe Name">
+
+<input type="text"
+id="recipeIngredients"
+placeholder="Ingredients separated by commas">
+
+<select id="recipeCategory">
+<option value="Breakfast">Breakfast</option>
+<option value="Lunch">Lunch</option>
+<option value="Dinner">Dinner</option>
+<option value="Snacks">Snacks</option>
+</select>
+
+<button id="addRecipeBtn">
+Add Recipe
+</button>
+
+<button id="deleteAllBtn">
+Delete All Saved Recipes
+</button>
+
+<h2>Search Recipe</h2>
+
+<input
+type="text"
+id="searchRecipe"
+placeholder="Search Recipe">
+
+<h2>Select Recipe</h2>
+
+<div id="recipeContainer"></div>
+
+<h2>Shopping List</h2>
+
+<ul id="shoppingList"></ul>
+
+<p id="progress">
+Progress: 0/0 purchased
+</p>
+
+<button id="clearBtn">
+Clear Shopping List
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
